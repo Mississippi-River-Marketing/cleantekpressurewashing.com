@@ -5,74 +5,141 @@
   <title>Our Work Gallery | Cleantek Pressure Washing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- ✅ ABSOLUTE PATHS -->
-  <link rel="stylesheet" href="/styles.css" />
+  <!-- ✅ Correct paths -->
+  <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
 <body>
 
-<section id="gallery" class="section gallery-section">
-  <div class="container">
-    <header class="section-header">
-      <h1 class="section-title">Our Work Gallery</h1>
-      <p class="section-subtitle">Tap any photo to view it larger.</p>
-    </header>
+  <section id="gallery" class="section gallery-section">
+    <div class="container">
+      <header class="section-header">
+        <h1 class="section-title">Our Work Gallery</h1>
+        <p class="section-subtitle">Tap any photo to view it larger.</p>
+      </header>
 
-    <div class="gallery-controls">
-      <button class="filter-btn is-active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="exterior">Exterior</button>
-      <button class="filter-btn" data-filter="interior">Interior</button>
-      <button class="filter-btn" data-filter="deck">Deck</button>
+      <div class="gallery-controls" aria-label="Gallery filters">
+        <button class="filter-btn is-active" type="button" data-filter="all">All</button>
+        <button class="filter-btn" type="button" data-filter="exterior">Exterior</button>
+        <button class="filter-btn" type="button" data-filter="interior">Interior</button>
+        <button class="filter-btn" type="button" data-filter="deck">Deck</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+
+        <!-- ✅ Update filenames to match your real images in /assets/img/ -->
+        <figure class="gallery-item" data-category="deck">
+          <button class="gallery-card" type="button" data-full="/assets/img/deck-1.jpg" aria-label="Open photo: Deck cleaning">
+            <img loading="lazy" src="/assets/img/deck-1.jpg" alt="Deck cleaning result">
+          </button>
+        </figure>
+
+        <figure class="gallery-item" data-category="exterior">
+          <button class="gallery-card" type="button" data-full="/assets/img/exterior-1.jpg" aria-label="Open photo: Exterior cleaning">
+            <img loading="lazy" src="/assets/img/exterior-1.jpg" alt="Exterior cleaning result">
+          </button>
+        </figure>
+
+        <figure class="gallery-item" data-category="exterior">
+          <button class="gallery-card" type="button" data-full="/assets/img/exterior-2.jpg" aria-label="Open photo: Exterior wash">
+            <img loading="lazy" src="/assets/img/exterior-2.jpg" alt="Exterior wash result">
+          </button>
+        </figure>
+
+        <figure class="gallery-item" data-category="interior">
+          <button class="gallery-card" type="button" data-full="/assets/img/interior-1.jpg" aria-label="Open photo: Interior cleaning">
+            <img loading="lazy" src="/assets/img/interior-1.jpg" alt="Interior cleaning result">
+          </button>
+        </figure>
+
+        <figure class="gallery-item" data-category="interior">
+          <button class="gallery-card" type="button" data-full="/assets/img/interior-2.jpg" aria-label="Open photo: Interior detail">
+            <img loading="lazy" src="/assets/img/interior-2.jpg" alt="Interior detail result">
+          </button>
+        </figure>
+
+      </div>
     </div>
 
-    <div class="gallery-grid" id="galleryGrid">
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+      <div class="lightbox-backdrop" data-close="true"></div>
 
-      <!-- DECK (single image) -->
-      <figure class="gallery-item" data-category="deck">
-        <button class="gallery-card" data-full="/assets/gallery/deck-1.jpg">
-          <img src="/assets/gallery/deck-1.jpg" alt="Deck cleaning result">
-        </button>
-      </figure>
-
-      <!-- EXTERIOR -->
-      <figure class="gallery-item" data-category="exterior">
-        <button class="gallery-card" data-full="/assets/gallery/exterior-1.jpg">
-          <img src="/assets/gallery/exterior-1.jpg" alt="Exterior cleaning result">
-        </button>
-      </figure>
-
-      <figure class="gallery-item" data-category="exterior">
-        <button class="gallery-card" data-full="/assets/gallery/exterior-2.jpg">
-          <img src="/assets/gallery/exterior-2.jpg" alt="Exterior wash result">
-        </button>
-      </figure>
-
-      <!-- INTERIOR -->
-      <figure class="gallery-item" data-category="interior">
-        <button class="gallery-card" data-full="/assets/gallery/interior-1.jpg">
-          <img src="/assets/gallery/interior-1.jpg" alt="Interior cleaning result">
-        </button>
-      </figure>
-
-      <figure class="gallery-item" data-category="interior">
-        <button class="gallery-card" data-full="/assets/gallery/interior-2.jpg">
-          <img src="/assets/gallery/interior-2.jpg" alt="Interior detail result">
-        </button>
-      </figure>
-
+      <div class="lightbox-panel" role="document">
+        <button class="lightbox-close" type="button" aria-label="Close image viewer" data-close="true">✕</button>
+        <img id="lightboxImg" alt="">
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox">
-    <div class="lightbox-backdrop" data-close></div>
-    <div class="lightbox-panel">
-      <button class="lightbox-close" data-close>✕</button>
-      <img id="lightboxImg" alt="">
-    </div>
-  </div>
-</section>
+  <!-- ✅ Your main JS file (change name if yours is different) -->
+  <script src="/assets/js/main.js"></script>
 
-<!-- ✅ ABSOLUTE PATH -->
-<script src="/scripts.js"></script>
+  <!-- ✅ Gallery logic (no browse/upload anywhere) -->
+  <script>
+    (() => {
+      const grid = document.getElementById('galleryGrid');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const filterButtons = document.querySelectorAll('.filter-btn');
+
+      if (!grid || !lightbox || !lightboxImg) return;
+
+      // Filtering
+      function setActive(btn) {
+        filterButtons.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+      }
+
+      function filterGallery(category) {
+        const items = grid.querySelectorAll('.gallery-item');
+        items.forEach(item => {
+          const itemCat = item.getAttribute('data-category');
+          const show = category === 'all' || itemCat === category;
+          item.classList.toggle('is-hidden', !show);
+        });
+      }
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const category = btn.getAttribute('data-filter') || 'all';
+          setActive(btn);
+          filterGallery(category);
+        });
+      });
+
+      // Lightbox open
+      grid.addEventListener('click', (e) => {
+        const card = e.target.closest('.gallery-card');
+        if (!card) return;
+
+        const full = card.getAttribute('data-full');
+        const img = card.querySelector('img');
+        if (!full) return;
+
+        lightboxImg.src = full;
+        lightboxImg.alt = img?.alt || 'Gallery image';
+        lightbox.classList.add('is-open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.documentElement.style.overflow = 'hidden';
+      });
+
+      // Close lightbox
+      function closeLightbox() {
+        lightbox.classList.remove('is-open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        lightboxImg.src = '';
+        document.documentElement.style.overflow = '';
+      }
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target.closest('[data-close="true"]')) closeLightbox();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+      });
+    })();
+  </script>
+
 </body>
 </html>

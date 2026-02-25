@@ -3,171 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <title>Our Work Gallery | Cleantek Pressure Washing</title>
-  <meta name="description" content="Before and after pressure washing results for driveways, decks, sidewalks, patios, and siding by Cleantek Pressure Washing.">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Before and after pressure washing results from Cleantek Pressure Washing." />
 
-  <!-- MAIN SITE STYLES -->
   <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
 <body>
 
-<section id="gallery" class="section gallery-section">
+<section class="section gallery-section">
   <div class="container">
 
+    <!-- HEADER -->
     <header class="section-header">
       <h1 class="section-title">Our Work Gallery</h1>
-      <p class="section-subtitle">Tap any photo to view it larger.</p>
+      <p class="section-subtitle">
+        Real results from real pressure washing jobs.
+      </p>
     </header>
 
-    <!-- FILTERS -->
-    <div class="gallery-controls">
-      <button class="filter-btn is-active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="exterior">Exterior</button>
-      <button class="filter-btn" data-filter="deck">Deck</button>
-    </div>
+    <!-- SIMPLE GRID -->
+    <div class="simple-gallery">
 
-    <!-- GALLERY GRID -->
-    <div class="gallery-grid" id="galleryGrid">
-
-      <!-- DECK -->
-      <figure class="gallery-item" data-category="deck">
-        <button class="gallery-card" data-full="/assets/img/deck-before-after.png">
-          <img src="/assets/img/deck-before-after.png" alt="Deck before and after pressure washing">
-        </button>
-      </figure>
-
-      <!-- EXTERIOR -->
-      <figure class="gallery-item" data-category="exterior">
-        <button class="gallery-card" data-full="/assets/img/fresh-driveway.png">
-          <img src="/assets/img/fresh-driveway.png" alt="Freshly cleaned driveway">
-        </button>
-      </figure>
-
-      <figure class="gallery-item" data-category="exterior">
-        <button class="gallery-card" data-full="/assets/img/driveway-garage-before-after.png">
-          <img src="/assets/img/driveway-garage-before-after.png" alt="Driveway and garage before and after pressure washing">
-        </button>
-      </figure>
-
-      <figure class="gallery-item" data-category="exterior">
-        <button class="gallery-card" data-full="/assets/img/curved-driveway-before-after.png">
-          <img src="/assets/img/curved-driveway-before-after.png" alt="Curved driveway before and after pressure washing">
-        </button>
-      </figure>
-
-      <figure class="gallery-item" data-category="exterior">
-        <button class="gallery-card" data-full="/assets/img/sidewalk-before-after.png">
-          <img src="/assets/img/sidewalk-before-after.png" alt="Sidewalk before and after cleaning">
-        </button>
-      </figure>
-
-      <figure class="gallery-item" data-category="exterior">
-        <button class="gallery-card" data-full="/assets/img/walkway-before-after.png">
-          <img src="/assets/img/walkway-before-after.png" alt="Walkway before and after pressure washing">
-        </button>
-      </figure>
-
-      <figure class="gallery-item" data-category="exterior">
-        <button class="gallery-card" data-full="/assets/img/brick-steps-before-after.png">
-          <img src="/assets/img/brick-steps-before-after.png" alt="Brick steps before and after cleaning">
-        </button>
-      </figure>
-
-      <figure class="gallery-item" data-category="exterior">
-        <button class="gallery-card" data-full="/assets/img/aggregate-concrete-before-after.png">
-          <img src="/assets/img/aggregate-concrete-before-after.png" alt="Aggregate concrete before and after pressure washing">
-        </button>
-      </figure>
-
-      <figure class="gallery-item" data-category="exterior">
-        <button class="gallery-card" data-full="/assets/img/patio-picnic-before-after.png">
-          <img src="/assets/img/patio-picnic-before-after.png" alt="Patio and picnic area before and after cleaning">
-        </button>
-      </figure>
-
-      <figure class="gallery-item" data-category="exterior">
-        <button class="gallery-card" data-full="/assets/img/vinyl-siding-softwash-before-after.png">
-          <img src="/assets/img/vinyl-siding-softwash-before-after.png" alt="Vinyl siding soft wash before and after">
-        </button>
-      </figure>
-
-      <!-- CREW / ACTION -->
-      <figure class="gallery-item" data-category="exterior">
-        <button class="gallery-card" data-full="/assets/img/crew-action.png">
-          <img src="/assets/img/crew-action.png" alt="Pressure washing crew at work">
-        </button>
-      </figure>
-
-      <figure class="gallery-item" data-category="exterior">
-        <button class="gallery-card" data-full="/assets/img/walkway-split-clean.png">
-          <img src="/assets/img/walkway-split-clean.png" alt="Walkway split clean comparison">
-        </button>
-      </figure>
+      <img src="/assets/img/deck-before-after.png" alt="Deck before and after pressure washing">
+      <img src="/assets/img/fresh-driveway.png" alt="Freshly cleaned driveway">
+      <img src="/assets/img/driveway-garage-before-after.png" alt="Driveway and garage before and after cleaning">
+      <img src="/assets/img/curved-driveway-before-after.png" alt="Curved driveway before and after cleaning">
+      <img src="/assets/img/sidewalk-before-after.png" alt="Sidewalk before and after pressure washing">
+      <img src="/assets/img/walkway-before-after.png" alt="Walkway before and after cleaning">
+      <img src="/assets/img/brick-steps-before-after.png" alt="Brick steps before and after cleaning">
+      <img src="/assets/img/aggregate-concrete-before-after.png" alt="Aggregate concrete before and after pressure washing">
+      <img src="/assets/img/patio-picnic-before-after.png" alt="Patio and picnic area before and after cleaning">
+      <img src="/assets/img/vinyl-siding-softwash-before-after.png" alt="Vinyl siding soft wash before and after">
+      <img src="/assets/img/walkway-split-clean.png" alt="Walkway split clean comparison">
+      <img src="/assets/img/crew-action.png" alt="Pressure washing crew at work">
 
     </div>
-  </div>
 
-  <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox">
-    <div class="lightbox-backdrop" data-close></div>
-    <div class="lightbox-panel">
-      <button class="lightbox-close" data-close>✕</button>
-      <img id="lightboxImg" alt="">
-    </div>
   </div>
 </section>
-
-<script src="/assets/js/main.js"></script>
-
-<script>
-(() => {
-  const grid = document.getElementById('galleryGrid');
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightboxImg');
-  const buttons = document.querySelectorAll('.filter-btn');
-
-  if (!grid) return;
-
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      buttons.forEach(b => b.classList.remove('is-active'));
-      btn.classList.add('is-active');
-
-      const filter = btn.dataset.filter;
-      document.querySelectorAll('.gallery-item').forEach(item => {
-        item.style.display =
-          filter === 'all' || item.dataset.category === filter
-            ? ''
-            : 'none';
-      });
-    });
-  });
-
-  grid.addEventListener('click', e => {
-    const card = e.target.closest('.gallery-card');
-    if (!card) return;
-    lightboxImg.src = card.dataset.full;
-    lightbox.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
-  });
-
-  lightbox.addEventListener('click', e => {
-    if (e.target.dataset.close !== undefined) {
-      lightbox.classList.remove('is-open');
-      lightboxImg.src = '';
-      document.body.style.overflow = '';
-    }
-  });
-
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      lightbox.classList.remove('is-open');
-      lightboxImg.src = '';
-      document.body.style.overflow = '';
-    }
-  });
-})();
-</script>
 
 </body>
 </html>

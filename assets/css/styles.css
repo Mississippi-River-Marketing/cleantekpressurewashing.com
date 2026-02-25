@@ -1,291 +1,377 @@
-/* ======================================================================
-   Cleantek Pressure Washing - styles.css (FULL REPLACEMENT)
-   Clean, readable, mobile-first, simple gallery grid
-   ====================================================================== */
+/* =========================================================
+   RESET + BASE
+   ========================================================= */
 
-/* ---------- CSS Reset (safe) ---------- */
 *,
 *::before,
-*::after { box-sizing: border-box; }
+*::after {
+  box-sizing: border-box;
+}
 
-html, body { height: 100%; }
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  line-height: 1.6;
   color: #111;
+  line-height: 1.6;
   background: #fff;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-img { max-width: 100%; height: auto; display: block; }
-a { color: inherit; text-decoration: none; }
-a:hover { text-decoration: underline; }
-button, input, textarea, select { font: inherit; }
-:focus-visible { outline: 3px solid rgba(0,0,0,.35); outline-offset: 2px; }
-
-/* ---------- Theme tokens ---------- */
-:root{
-  --bg: #ffffff;
-  --text: #111111;
-  --muted: rgba(17,17,17,.7);
-  --border: rgba(17,17,17,.12);
-  --card: #ffffff;
-  --shadow: 0 10px 24px rgba(0,0,0,.08);
-
-  --radius: 16px;
-  --radius-sm: 12px;
-
-  --container: 1100px;
-  --pad: 18px;
-
-  --h1: clamp(30px, 3.3vw, 46px);
-  --h2: clamp(24px, 2.6vw, 34px);
-  --h3: clamp(18px, 2.1vw, 24px);
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-/* ---------- Layout helpers ---------- */
-.container{
-  width: min(var(--container), calc(100% - (var(--pad) * 2)));
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* =========================================================
+   SKIP LINK (ACCESSIBILITY)
+   ========================================================= */
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px 12px;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+}
+
+/* =========================================================
+   LAYOUT HELPERS
+   ========================================================= */
+
+.container {
+  width: min(1100px, 92%);
   margin-inline: auto;
 }
 
-.section{
-  padding: clamp(28px, 5vw, 64px) 0;
+.section {
+  padding: 64px 0;
 }
 
-.section-header{
+.section-header {
   text-align: center;
-  margin-bottom: clamp(16px, 3vw, 28px);
+  margin-bottom: 32px;
 }
 
-.section-title{
-  font-size: var(--h2);
-  line-height: 1.15;
+.section-title {
+  font-size: clamp(28px, 4vw, 44px);
   margin: 0 0 8px;
-  letter-spacing: -0.02em;
 }
 
-.section-subtitle{
-  margin: 0 auto;
-  max-width: 70ch;
-  color: var(--muted);
+.section-subtitle {
+  color: #555;
   font-size: 16px;
 }
 
-/* ---------- Headings / text ---------- */
-h1,h2,h3 { margin: 0 0 10px; line-height: 1.2; letter-spacing: -0.02em; }
-p { margin: 0 0 14px; color: var(--text); }
-small { color: var(--muted); }
+/* =========================================================
+   HEADER (THIS FIXES YOUR ISSUE)
+   ========================================================= */
 
-/* ---------- Cards ---------- */
-.card{
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: clamp(16px, 2.2vw, 24px);
-}
-
-/* ---------- Buttons (if your site uses them) ---------- */
-.btn{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 12px 16px;
-  border-radius: 999px;
-  border: 1px solid rgba(17,17,17,.18);
-  background: #111;
-  color: #fff;
-  cursor: pointer;
-  text-decoration: none;
-  min-height: 46px; /* big tap target */
-}
-
-.btn:hover { filter: brightness(1.05); text-decoration: none; }
-.btn:active { transform: translateY(1px); }
-
-.btn-outline{
-  background: transparent;
-  color: #111;
-}
-
-.btn-outline:hover{
-  background: rgba(0,0,0,.04);
-}
-
-/* ---------- Forms (safe, old-person friendly) ---------- */
-label { display: block; font-weight: 600; margin-bottom: 6px; }
-
-input, textarea, select{
-  width: 100%;
-  border: 1px solid rgba(17,17,17,.18);
-  border-radius: 12px;
-  padding: 12px 12px;
+.site-header {
+  border-bottom: 1px solid #e6e6e6;
   background: #fff;
 }
 
-textarea { min-height: 120px; resize: vertical; }
-
-.form-row{
-  display: grid;
-  gap: 14px;
-}
-
-@media (min-width: 760px){
-  .form-row.two-col{ grid-template-columns: 1fr 1fr; }
-}
-
-/* ---------- Basic site header/nav support (won’t break if unused) ---------- */
-header.site-header{
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(255,255,255,.92);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-}
-
-.nav-wrap{
+.header-inner {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  padding: 14px 0;
+}
+
+/* top bar */
+.header-top {
+  display: flex;
   justify-content: space-between;
-  gap: 14px;
-  padding: 10px 0;
+  font-size: 14px;
 }
 
-.logo, .site-logo{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  font-size: 18px;
+.header-phone {
+  font-weight: 600;
 }
 
-.logo img, .site-logo img{
-  height: 54px; /* bigger logo */
-  width: auto;
+.header-cta {
+  font-weight: 600;
 }
 
-@media (min-width: 900px){
-  .logo img, .site-logo img{ height: 64px; }
-}
-
-.nav-menu{
+/* brand row */
+.brand-row {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+
+.brand-logo {
+  height: 72px;
+}
+
+.brand-text {
+  line-height: 1.2;
+}
+
+.brand-name {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.brand-sub {
+  font-size: 14px;
+  color: #555;
+}
+
+/* nav */
+.nav {
+  display: flex;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
-.nav-menu a{
-  padding: 10px 10px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: rgba(17,17,17,.92);
+.nav a {
+  font-weight: 600;
+  padding: 6px 0;
+  position: relative;
 }
 
-.nav-menu a:hover{
-  background: rgba(0,0,0,.05);
-  text-decoration: none;
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.2s ease;
 }
 
-/* Simple mobile toggle compatibility */
-.nav-toggle{
-  display: none;
-  border: 1px solid rgba(17,17,17,.2);
-  background: #fff;
-  border-radius: 12px;
-  padding: 10px 12px;
-  cursor: pointer;
-  min-height: 44px;
+.nav a:hover::after,
+.nav a[aria-current="page"]::after {
+  width: 100%;
 }
 
-@media (max-width: 760px){
-  .nav-toggle{ display: inline-flex; }
-  .nav-menu{
-    display: none;
-    width: 100%;
-    padding: 10px 0 14px;
-  }
-  .nav-menu.is-open{ display: flex; }
-  .nav-wrap{ flex-wrap: wrap; }
-}
-
-/* ---------- Simple “hero” styling (if your site has a hero section) ---------- */
-.hero{
-  padding: clamp(28px, 5vw, 70px) 0;
-}
-
-.hero h1{
-  font-size: var(--h1);
-  margin: 0 0 12px;
-}
-
-.hero p{
-  max-width: 70ch;
-  color: var(--muted);
-  font-size: 17px;
-}
-
-.hero-actions{
+/* header buttons */
+.header-buttons {
   display: flex;
   gap: 12px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-outline {
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.12);
+}
+
+/* mobile header */
+@media (max-width: 720px) {
+  .brand-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-top {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .header-buttons {
+    justify-content: center;
+  }
+}
+
+/* =========================================================
+   HERO (HOMEPAGE)
+   ========================================================= */
+
+.hero-eyebrow {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-size: clamp(32px, 5vw, 56px);
+  margin: 0 0 16px;
+}
+
+.hero-lede {
+  max-width: 650px;
+  color: #444;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
   flex-wrap: wrap;
-  margin-top: 16px;
 }
 
-/* ---------- Simple footer ---------- */
-footer{
-  border-top: 1px solid var(--border);
-  padding: 22px 0;
-  color: var(--muted);
+.hero-bullets {
+  padding-left: 18px;
 }
 
-/* ======================================================================
-   GALLERY (YOUR REQUEST)
-   Simple grid layout, no filters, no JS required
-   Less-rectangle photos (square-ish)
-   ====================================================================== */
+/* =========================================================
+   GALLERY (MATCHES YOUR SCREENSHOT)
+   ========================================================= */
 
-.gallery-section .section-header{
-  margin-bottom: 18px;
-}
-
-/* This class is used by the gallery.html I sent you */
-.simple-gallery{
+.simple-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.simple-gallery img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 18px;
+  background: #f2f2f2;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.simple-gallery img:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 16px 32px rgba(0,0,0,.15);
+}
+
+/* =========================================================
+   CARDS / SERVICES
+   ========================================================= */
+
+.cards {
+  display: grid;
+  gap: 20px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+  border: 1px solid #e6e6e6;
+  border-radius: 18px;
+  padding: 24px;
+  background: #fff;
+}
+
+/* =========================================================
+   FORMS / CONTACT
+   ========================================================= */
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  gap: 14px;
+}
+
+.two-col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 600px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+  border-top: 1px solid #e6e6e6;
+  padding: 32px 0;
+  margin-top: 60px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  display: flex;
   gap: 16px;
 }
 
-/* Make images near-square, not rectangles */
-.simple-gallery img{
-  width: 100%;
-  aspect-ratio: 1 / 1;   /* square */
-  object-fit: cover;
-  border-radius: var(--radius-sm);
-  background: #f3f3f3;
-  border: 1px solid rgba(17,17,17,.10);
-  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+/* =========================================================
+   SCROLL ANIMATION (OPTIONAL)
+   ========================================================= */
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* Make tap targets feel nice on mobile */
-@media (max-width: 520px){
-  .simple-gallery{
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-  .simple-gallery img{
-    aspect-ratio: 4 / 5; /* slightly taller on tiny screens but still not “banner rectangle” */
-  }
+[data-animate].is-in {
+  opacity: 1;
+  transform: none;
 }
 
-/* ======================================================================
-   End
-   ====================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

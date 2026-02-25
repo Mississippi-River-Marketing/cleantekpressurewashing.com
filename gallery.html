@@ -1,72 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Work Gallery | Cleantek Pressure Washing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ✅ ABSOLUTE PATHS -->
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
 <section id="gallery" class="section gallery-section">
   <div class="container">
     <header class="section-header">
-      <h2 class="section-title">Our Work Gallery</h2>
+      <h1 class="section-title">Our Work Gallery</h1>
       <p class="section-subtitle">Tap any photo to view it larger.</p>
     </header>
 
-    <!-- Optional simple filters (no "browse" / no upload) -->
-    <div class="gallery-controls" aria-label="Gallery filters">
-      <button class="filter-btn is-active" type="button" data-filter="all">All</button>
-      <button class="filter-btn" type="button" data-filter="exterior">Exterior</button>
-      <button class="filter-btn" type="button" data-filter="interior">Interior</button>
-      <button class="filter-btn" type="button" data-filter="deck">Deck</button>
+    <div class="gallery-controls">
+      <button class="filter-btn is-active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="exterior">Exterior</button>
+      <button class="filter-btn" data-filter="interior">Interior</button>
+      <button class="filter-btn" data-filter="deck">Deck</button>
     </div>
 
     <div class="gallery-grid" id="galleryGrid">
-      <!-- Deck (ONLY ONE deck image example) -->
+
+      <!-- DECK (single image) -->
       <figure class="gallery-item" data-category="deck">
-        <button class="gallery-card" type="button"
-          data-full="assets/gallery/deck-1.jpg"
-          aria-label="Open photo: Deck cleaning">
-          <img loading="lazy" src="assets/gallery/deck-1.jpg" alt="Deck cleaning result" />
+        <button class="gallery-card" data-full="/assets/gallery/deck-1.jpg">
+          <img src="/assets/gallery/deck-1.jpg" alt="Deck cleaning result">
         </button>
       </figure>
 
-      <!-- Exterior examples -->
+      <!-- EXTERIOR -->
       <figure class="gallery-item" data-category="exterior">
-        <button class="gallery-card" type="button"
-          data-full="assets/gallery/exterior-1.jpg"
-          aria-label="Open photo: Exterior cleaning">
-          <img loading="lazy" src="assets/gallery/exterior-1.jpg" alt="Exterior cleaning result" />
+        <button class="gallery-card" data-full="/assets/gallery/exterior-1.jpg">
+          <img src="/assets/gallery/exterior-1.jpg" alt="Exterior cleaning result">
         </button>
       </figure>
 
       <figure class="gallery-item" data-category="exterior">
-        <button class="gallery-card" type="button"
-          data-full="assets/gallery/exterior-2.jpg"
-          aria-label="Open photo: Exterior wash">
-          <img loading="lazy" src="assets/gallery/exterior-2.jpg" alt="Exterior wash result" />
+        <button class="gallery-card" data-full="/assets/gallery/exterior-2.jpg">
+          <img src="/assets/gallery/exterior-2.jpg" alt="Exterior wash result">
         </button>
       </figure>
 
-      <!-- Interior examples -->
+      <!-- INTERIOR -->
       <figure class="gallery-item" data-category="interior">
-        <button class="gallery-card" type="button"
-          data-full="assets/gallery/interior-1.jpg"
-          aria-label="Open photo: Interior cleaning">
-          <img loading="lazy" src="assets/gallery/interior-1.jpg" alt="Interior cleaning result" />
+        <button class="gallery-card" data-full="/assets/gallery/interior-1.jpg">
+          <img src="/assets/gallery/interior-1.jpg" alt="Interior cleaning result">
         </button>
       </figure>
 
       <figure class="gallery-item" data-category="interior">
-        <button class="gallery-card" type="button"
-          data-full="assets/gallery/interior-2.jpg"
-          aria-label="Open photo: Interior detail">
-          <img loading="lazy" src="assets/gallery/interior-2.jpg" alt="Interior detail result" />
+        <button class="gallery-card" data-full="/assets/gallery/interior-2.jpg">
+          <img src="/assets/gallery/interior-2.jpg" alt="Interior detail result">
         </button>
       </figure>
+
     </div>
   </div>
 
-  <!-- Lightbox modal -->
-  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
-    <div class="lightbox-backdrop" data-close="true"></div>
-
-    <div class="lightbox-panel" role="document">
-      <button class="lightbox-close" type="button" aria-label="Close image viewer" data-close="true">✕</button>
-
-      <img id="lightboxImg" alt="" />
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-backdrop" data-close></div>
+    <div class="lightbox-panel">
+      <button class="lightbox-close" data-close>✕</button>
+      <img id="lightboxImg" alt="">
     </div>
   </div>
 </section>
+
+<!-- ✅ ABSOLUTE PATH -->
+<script src="/scripts.js"></script>
+</body>
+</html>

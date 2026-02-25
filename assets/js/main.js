@@ -1,43 +1,47 @@
-(function () {
-  const current = (document.body.getAttribute("data-page") || "").trim();
-  document.querySelectorAll("[data-nav]").forEach(a => {
-    if (a.getAttribute("data-nav") === current) a.classList.add("active");
+// Mobile nav toggle (if present)
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+if (navToggle && navMenu) {
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
   });
+}
 
-  // Simple lightbox for gallery
-  const modal = document.getElementById("lightbox");
-  if (!modal) return;
+/* =========================
+   Gallery Lightbox (FIXED)
+   ========================= */
 
-  const modalImg = modal.querySelector("img");
-  const modalCap = modal.querySelector("[data-cap]");
-  const closeBtn = modal.querySelector("[data-close]");
+document.querySelectorAll('[data-lightbox]').forEach(item => {
+  item.addEventListener('click', () => {
+    const src = item.getAttribute('data-src');
+    const caption = item.getAttribute('data-cap') || '';
 
-  function openLightbox(src, cap) {
-    modalImg.src = src;
-    modalCap.textContent = cap || "";
-    modal.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  }
+    const overlay = document.createElement('div');
+    overlay.style.position = 'fixed';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.background = 'rgba(0,0,0,0.85)';
+    overlay.style.display = 'flex';
+    overlay.style.alignItems = 'center';
+    overlay.style.justifyContent = 'center';
+    overlay.style.zIndex = '9999';
 
-  function closeLightbox() {
-    modal.setAttribute("aria-hidden", "true");
-    modalImg.src = "";
-    document.body.style.overflow = "";
-  }
+    overlay.innerHTML = `
+      <div style="max-width:90%; max-height:90%; text-align:center;">
+        <img src="${src}" style="max-width:100%; max-height:80vh; border-radius:14px;">
+        <p style="color:#fff; margin-top:14px; font-size:16px;">${caption}</p>
+        <button style="margin-top:12px; padding:10px 16px; border-radius:10px; border:none; cursor:pointer; font-size:14px;">
+          Close
+        </button>
+      </div>
+    `;
 
-  document.querySelectorAll("[data-lightbox]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const src = btn.getAttribute("data-src");
-      const cap = btn.getAttribute("data-cap");
-      openLightbox(src, cap);
-    });
+    overlay.querySelector('button').onclick = () => overlay.remove();
+    overlay.onclick = e => { if (e.target === overlay) overlay.remove(); };
+
+    document.body.appendChild(overlay);
   });
-
-  closeBtn && closeBtn.addEventListener("click", closeLightbox);
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) closeLightbox();
-  });
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeLightbox();
-  });
-})();
+});

@@ -3,168 +3,390 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#050b14" />
+  <meta name="theme-color" content="#060b14" />
+
   <title>Clean Tek Pressure Washing | Southeast Missouri</title>
-  <meta name="description" content="Clean Tek Pressure Washing serving Southeast Missouri. Call now for a fast quote. Concrete, brick, siding soft wash, decks, patios, sidewalks, and more." />
+  <meta name="description" content="Clean Tek Pressure Washing serving Southeast Missouri. Driveways, concrete, brick, siding soft wash, decks and patios. Call now for a fast quote." />
 
   <meta property="og:title" content="Clean Tek Pressure Washing | SEMO" />
-  <meta property="og:description" content="Real results. Surface-safe methods. Call now for a fast quote." />
+  <meta property="og:description" content="Real results. Surface-safe methods. Fast quotes by phone." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/img/crew-action.png" />
 
   <link rel="icon" href="assets/favicon.png" onerror="this.href='assets/logo.png'">
   <link rel="apple-touch-icon" href="assets/logo.png" />
+
+  <link rel="preload" as="image" href="assets/img/crew-action.png">
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
 <body>
-  <header class="topbar">
-    <div class="wrap topbar-inner">
-      <a class="brand" href="index.html" aria-label="Clean Tek home">
-        <img class="logo" src="assets/logo.png" alt="Clean Tek logo" />
-        <div>
-          <div class="brand-name">Clean Tek Pressure Washing</div>
-          <div class="brand-sub">Serving Southeast Missouri</div>
+  <!-- Top Nav -->
+  <header class="nav" role="banner">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="#top" aria-label="Clean Tek home">
+        <img class="nav__logo" src="assets/logo.png" alt="Clean Tek logo" />
+        <div class="nav__brandText">
+          <div class="nav__name">Clean Tek</div>
+          <div class="nav__sub">Pressure Washing • SEMO</div>
         </div>
       </a>
 
-      <div class="nav" aria-label="Site navigation">
-        <a href="index.html">Home</a>
-        <a href="results.html">Results</a>
-        <a href="service-area.html">Service Area</a>
-      </div>
+      <nav class="nav__links" aria-label="Site links">
+        <a href="#results">Results</a>
+        <a href="#process">Process</a>
+        <a href="#service-area">Service Area</a>
+      </nav>
 
-      <div class="actions" aria-label="Primary actions">
-        <a class="btn btn-ghost" id="ctaText" href="#">Text</a>
-        <a class="btn btn-solid" id="ctaCall" href="#">Call Now</a>
+      <div class="nav__actions" aria-label="Primary actions">
+        <a class="btn btn--ghost" id="ctaTextTop" href="#">Text</a>
+        <a class="btn btn--solid" id="ctaCallTop" href="#">Call Now</a>
       </div>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" style="--hero-img:url('assets/img/crew-action.png')">
-    <div class="hero-bg" aria-hidden="true"></div>
+  <!-- Floating CTA (desktop) -->
+  <aside class="floatCta" aria-label="Quick actions">
+    <a class="floatCta__btn floatCta__btn--solid" id="ctaCallFloat" href="#">Call</a>
+    <a class="floatCta__btn" id="ctaTextFloat" href="#">Text</a>
+    <a class="floatCta__btn" id="ctaFbFloat" href="#" target="_blank" rel="noopener">Facebook</a>
+  </aside>
 
-    <div class="wrap hero-grid">
-      <div>
-        <span class="badge">5.0 ★ • Local • Fast Quotes</span>
-
-        <h1>Pressure Washing That Makes Your Property Look New Again</h1>
-
-        <p>
-          Clean Tek delivers real curb-appeal results across SEMO.
-          We clean concrete, brick, siding (soft wash), decks, patios, sidewalks, and more —
-          using the right method for the surface.
-        </p>
-
-        <div class="hero-ctas">
-          <a class="btn btn-solid" id="ctaCall" href="#">📞 Call (Fastest)</a>
-          <a class="btn btn-ghost" id="ctaText" href="#">Text</a>
-          <a class="btn btn-ghost" id="ctaFacebook" href="#" target="_blank" rel="noopener">Facebook Message</a>
-        </div>
-
-        <div class="hero-phone">
-          Phone: <a id="phoneLink" href="#"></a>
-        </div>
-
-        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn btn-solid" id="ctaGoogleReview" href="#" target="_blank" rel="noopener">⭐ Google Review</a>
-          <a class="btn btn-ghost" id="ctaFacebookReview" href="#" target="_blank" rel="noopener">⭐ Facebook Review</a>
-        </div>
+  <main id="top">
+    <!-- HERO: original, brand-forward -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__bgImg" data-parallax="0.18" style="background-image:url('assets/img/crew-action.png')"></div>
+        <div class="hero__bgWash"></div>
+        <div class="hero__bgFlow"></div>
       </div>
 
-      <div class="hero-card">
-        <img src="assets/img/driveway-garage-before-after.png" alt="Before and after driveway results" loading="eager" />
-        <div class="cap">Tap “Results” to see more before/after transformations.</div>
-      </div>
-    </div>
-  </section>
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <div class="chipRow reveal">
+            <span class="chip">Local • Southeast Missouri</span>
+            <span class="chip">Fast Quotes by Phone</span>
+            <span class="chip">Surface-safe methods</span>
+          </div>
 
-  <!-- BRAND BLOCK 1 -->
-  <section class="block" style="--block-img:url('assets/img/brick-steps-before-after.png')">
-    <div class="block-bg" aria-hidden="true"></div>
+          <h1 class="hero__h1 reveal">
+            Make concrete look new again.
+            <span class="hero__h1Accent">Clean. Even. Professional.</span>
+          </h1>
 
-    <div class="wrap block-grid">
-      <div class="panel">
-        <h2>Concrete & Driveways Done Right</h2>
-        <p>
-          Built-up grime, algae, and stains can make concrete look old and neglected.
-          We clean it safely and evenly for a crisp finish that looks professional.
-        </p>
+          <p class="hero__p reveal">
+            Driveways, sidewalks, brick, siding soft wash, decks & patios — cleaned with the right method for the surface.
+            Serving the SEMO corridor: Jackson • Cape Girardeau • Sikeston • Dexter • Bloomfield • Perryville • Ste. Genevieve • New Madrid.
+          </p>
 
-        <div class="kpis">
-          <span class="kpi">Driveways</span>
-          <span class="kpi">Sidewalks</span>
-          <span class="kpi">Patios</span>
-          <span class="kpi">Commercial Concrete</span>
+          <div class="hero__cta reveal">
+            <a class="btn btn--solid btn--big" id="ctaCallHero" href="#">📞 Call (Fastest)</a>
+            <a class="btn btn--ghost btn--big" id="ctaTextHero" href="#">Text Photos</a>
+            <a class="btn btn--ghost btn--big" id="ctaFbHero" href="#" target="_blank" rel="noopener">Facebook Message</a>
+          </div>
+
+          <div class="hero__meta reveal">
+            <div class="hero__metaItem">
+              <div class="hero__metaLabel">Phone</div>
+              <a class="hero__metaValue" id="phoneInline" href="#"></a>
+            </div>
+            <div class="hero__metaItem">
+              <div class="hero__metaLabel">Reviews</div>
+              <div class="hero__metaValue">
+                <a id="ctaGoogleReviewHero" href="#" target="_blank" rel="noopener">Google Review</a>
+                <span class="dot">•</span>
+                <a id="ctaFacebookReviewHero" href="#" target="_blank" rel="noopener">Facebook Review</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="scrollCue" aria-hidden="true">
+            <div class="scrollCue__line"></div>
+            <div class="scrollCue__text">Scroll</div>
+          </div>
         </div>
 
-        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn btn-solid" id="ctaCall" href="#">Call Now</a>
-          <a class="btn btn-ghost" href="results.html">See Results</a>
-        </div>
-      </div>
+        <div class="hero__proof reveal">
+          <div class="proofCard">
+            <div class="proofCard__top">
+              <div class="proofCard__title">Proof, not promises</div>
+              <div class="proofCard__sub">Tap to zoom • real side-by-sides</div>
+            </div>
 
-      <div class="panel" style="background:rgba(255,255,255,.04)">
-        <div class="badge">Most Requested</div>
-        <h2 style="margin-top:12px;">Fast Quotes by Phone</h2>
-        <p>
-          The quickest way is to call. If you want, text photos of the area and we’ll give you an estimate.
-        </p>
-        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn btn-solid" id="ctaCall" href="#">📞 Call</a>
-          <a class="btn btn-ghost" id="ctaText" href="#">Text Photos</a>
-        </div>
-      </div>
-    </div>
-  </section>
+            <button class="zoomTile" data-src="assets/img/driveway-garage-before-after.png" data-cap="Driveway + garage approach — heavy buildup removed">
+              <img src="assets/img/driveway-garage-before-after.png" alt="Before and after driveway cleaning" loading="eager">
+              <span class="zoomTile__hint">Tap</span>
+            </button>
 
-  <!-- BRAND BLOCK 2 -->
-  <section class="block" style="--block-img:url('assets/img/vinyl-siding-softwash-before-after.png')">
-    <div class="block-bg" aria-hidden="true"></div>
-
-    <div class="wrap block-grid">
-      <div class="panel">
-        <h2>Siding Soft Wash (Surface-Safe)</h2>
-        <p>
-          Some surfaces shouldn’t be hit with high pressure. For siding and delicate areas,
-          we use safer soft-wash methods to remove buildup without damage.
-        </p>
-
-        <div class="kpis">
-          <span class="kpi">Vinyl Siding</span>
-          <span class="kpi">Brick</span>
-          <span class="kpi">Trim</span>
-          <span class="kpi">Exterior Wash</span>
-        </div>
-
-        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn btn-solid" id="ctaCall" href="#">Call Now</a>
-          <a class="btn btn-ghost" id="ctaFacebook" href="#" target="_blank" rel="noopener">Message Facebook</a>
+            <div class="proofCard__bottom">
+              <a class="btn btn--solid" href="#results">See More Results</a>
+              <a class="btn btn--ghost" href="#service-area">Check Service Area</a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="hero-card">
-        <img src="assets/img/walkway-before-after.png" alt="Walkway before and after" loading="lazy" />
-        <div class="cap">Clean lines. Big difference.</div>
-      </div>
-    </div>
-  </section>
+      <!-- Diagonal separator -->
+      <div class="slash" aria-hidden="true"></div>
+    </section>
 
-  <footer class="footer">
-    <div class="wrap footer-inner">
-      <div>
-        <div class="foot-brand">Clean Tek Pressure Washing</div>
-        <div style="color:var(--muted)">Southeast Missouri</div>
+    <!-- RESULTS: masonry + motion -->
+    <section id="results" class="section">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2 class="h2">Before & After Results</h2>
+          <p class="sub">Tap any image to zoom. These are real Clean Tek transformations.</p>
+        </div>
+
+        <div class="masonry">
+          <!-- Use your assets (no repeats needed elsewhere) -->
+          <article class="tile reveal">
+            <div class="tile__head">
+              <div class="tile__title">Brick Steps</div>
+              <div class="tile__sub">Restored color & contrast</div>
+            </div>
+            <button class="zoomTile" data-src="assets/img/brick-steps-before-after.png" data-cap="Brick steps — restored color & contrast">
+              <img src="assets/img/brick-steps-before-after.png" alt="Brick steps before and after" loading="lazy">
+              <span class="zoomTile__hint">Tap</span>
+            </button>
+          </article>
+
+          <article class="tile reveal">
+            <div class="tile__head">
+              <div class="tile__title">Curved Driveway</div>
+              <div class="tile__sub">Full cleanup, crisp finish</div>
+            </div>
+            <button class="zoomTile" data-src="assets/img/curved-driveway-before-after.png" data-cap="Curved driveway — full cleanup, crisp finish">
+              <img src="assets/img/curved-driveway-before-after.png" alt="Curved driveway before and after" loading="lazy">
+              <span class="zoomTile__hint">Tap</span>
+            </button>
+          </article>
+
+          <article class="tile reveal">
+            <div class="tile__head">
+              <div class="tile__title">Siding Soft Wash</div>
+              <div class="tile__sub">Surface-safe method</div>
+            </div>
+            <button class="zoomTile" data-src="assets/img/vinyl-siding-softwash-before-after.png" data-cap="Siding soft wash — surface-safe method">
+              <img src="assets/img/vinyl-siding-softwash-before-after.png" alt="Siding soft wash before and after" loading="lazy">
+              <span class="zoomTile__hint">Tap</span>
+            </button>
+          </article>
+
+          <article class="tile reveal">
+            <div class="tile__head">
+              <div class="tile__title">Aggregate Concrete</div>
+              <div class="tile__sub">Texture restored</div>
+            </div>
+            <button class="zoomTile" data-src="assets/img/aggregate-concrete-before-after.png" data-cap="Aggregate concrete — texture restored">
+              <img src="assets/img/aggregate-concrete-before-after.png" alt="Aggregate concrete before and after" loading="lazy">
+              <span class="zoomTile__hint">Tap</span>
+            </button>
+          </article>
+
+          <article class="tile reveal">
+            <div class="tile__head">
+              <div class="tile__title">Walkway Cleanup</div>
+              <div class="tile__sub">Safer footing</div>
+            </div>
+            <button class="zoomTile" data-src="assets/img/walkway-before-after.png" data-cap="Walkway — safer footing and clean lines">
+              <img src="assets/img/walkway-before-after.png" alt="Walkway before and after" loading="lazy">
+              <span class="zoomTile__hint">Tap</span>
+            </button>
+          </article>
+
+          <article class="tile reveal">
+            <div class="tile__head">
+              <div class="tile__title">Deck Wash</div>
+              <div class="tile__sub">Organic buildup removed</div>
+            </div>
+            <button class="zoomTile" data-src="assets/img/deck-before-after.png" data-cap="Deck — organic buildup removed">
+              <img src="assets/img/deck-before-after.png" alt="Deck before and after" loading="lazy">
+              <span class="zoomTile__hint">Tap</span>
+            </button>
+          </article>
+
+          <article class="tile reveal">
+            <div class="tile__head">
+              <div class="tile__title">Sidewalk Results</div>
+              <div class="tile__sub">Clean lines</div>
+            </div>
+            <button class="zoomTile" data-src="assets/img/sidewalk-before-after.png" data-cap="Sidewalk — clean lines and big difference">
+              <img src="assets/img/sidewalk-before-after.png" alt="Sidewalk before and after" loading="lazy">
+              <span class="zoomTile__hint">Tap</span>
+            </button>
+          </article>
+        </div>
+
+        <div class="centerCta reveal">
+          <a class="btn btn--solid btn--big" id="ctaCallResults" href="#">Call for a Quote</a>
+          <a class="btn btn--ghost btn--big" id="ctaTextResults" href="#">Text Photos</a>
+        </div>
       </div>
-      <div class="foot-links">
-        <a id="ctaCall" href="#">Call</a>
-        <a id="ctaText" href="#">Text</a>
-        <a id="ctaFacebook" href="#" target="_blank" rel="noopener">Facebook</a>
-        <a id="ctaGoogleReview" href="#" target="_blank" rel="noopener">Google Review</a>
+    </section>
+
+    <!-- PROCESS: original “flow path” section -->
+    <section id="process" class="section section--dark">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2 class="h2">The Clean Tek Method</h2>
+          <p class="sub">Simple. Clear. No guessing — and the surface determines the method.</p>
+        </div>
+
+        <div class="flow reveal">
+          <div class="flow__line" aria-hidden="true"></div>
+
+          <div class="step">
+            <div class="step__dot"></div>
+            <div class="step__card">
+              <div class="step__title">1) Call or Text Photos</div>
+              <div class="step__text">Fastest quote is by phone. Text is perfect if you want to send pictures.</div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step__dot"></div>
+            <div class="step__card">
+              <div class="step__title">2) Pick the Right Method</div>
+              <div class="step__text">Concrete can take pressure; siding often needs soft-wash. We match method to surface.</div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step__dot"></div>
+            <div class="step__card">
+              <div class="step__title">3) Clean Evenly (No Tiger Stripes)</div>
+              <div class="step__text">Even coverage, clean edges, and a consistent finish — the details matter.</div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step__dot"></div>
+            <div class="step__card">
+              <div class="step__title">4) Walkthrough + Results</div>
+              <div class="step__text">You see the difference immediately — and your curb appeal goes up the same day.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="split reveal">
+          <div class="split__left">
+            <h3 class="h3">Want the fastest quote?</h3>
+            <p class="sub">Call now. If you’re busy, text photos and your city — we’ll respond ASAP.</p>
+          </div>
+          <div class="split__right">
+            <a class="btn btn--solid btn--big" id="ctaCallProcess" href="#">Call Now</a>
+            <a class="btn btn--ghost btn--big" id="ctaTextProcess" href="#">Text Photos</a>
+            <a class="btn btn--ghost btn--big" id="ctaFbProcess" href="#" target="_blank" rel="noopener">Facebook</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
+    </section>
+
+    <!-- SERVICE AREA: local-first, “route” visual + real map -->
+    <section id="service-area" class="section">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2 class="h2">Service Area (SEMO Corridor)</h2>
+          <p class="sub">
+            Jackson • Cape Girardeau • Sikeston • Dexter • Bloomfield • Perryville • Ste. Genevieve • New Madrid —
+            and everywhere between.
+          </p>
+        </div>
+
+        <div class="area reveal">
+          <div class="area__left">
+            <div class="area__route" aria-hidden="true">
+              <div class="route">
+                <div class="route__dot"></div><div class="route__name">Ste. Genevieve</div>
+                <div class="route__line"></div>
+                <div class="route__dot"></div><div class="route__name">Perryville</div>
+                <div class="route__line"></div>
+                <div class="route__dot"></div><div class="route__name">Jackson</div>
+                <div class="route__line"></div>
+                <div class="route__dot"></div><div class="route__name">Cape Girardeau</div>
+                <div class="route__line"></div>
+                <div class="route__dot"></div><div class="route__name">Sikeston</div>
+                <div class="route__line"></div>
+                <div class="route__dot"></div><div class="route__name">Dexter</div>
+                <div class="route__line"></div>
+                <div class="route__dot"></div><div class="route__name">Bloomfield</div>
+                <div class="route__line"></div>
+                <div class="route__dot"></div><div class="route__name">New Madrid</div>
+              </div>
+            </div>
+
+            <div class="area__cta">
+              <a class="btn btn--solid btn--big" id="ctaCallArea" href="#">Call Now</a>
+              <a class="btn btn--ghost btn--big" id="ctaTextArea" href="#">Text Photos</a>
+            </div>
+          </div>
+
+          <div class="area__map">
+            <div class="mapFrame">
+              <iframe
+                title="Clean Tek service area map"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?hl=en&q=Cape%20Girardeau%20MO&z=9&output=embed">
+              </iframe>
+              <div class="mapFrame__overlay" aria-hidden="true">
+                <!-- stable polygon only -->
+                <svg viewBox="0 0 1000 600" preserveAspectRatio="none">
+                  <path
+                    d="M265,120
+                       C360,70 470,62 580,98
+                       C675,130 740,200 770,280
+                       C795,350 780,430 725,495
+                       C665,565 555,585 460,555
+                       C370,525 305,455 280,375
+                       C252,290 238,200 265,120 Z"
+                    fill="rgba(27,141,255,0.14)"
+                    stroke="rgba(27,141,255,0.95)"
+                    stroke-width="4" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footCta reveal">
+          <div class="footCta__left">
+            <div class="footCta__title">Call is fastest.</div>
+            <div class="footCta__sub">Text is perfect if you want to send photos.</div>
+          </div>
+          <div class="footCta__right">
+            <a class="btn btn--solid btn--big" id="ctaCallBottom" href="#">Call Now</a>
+            <a class="btn btn--ghost btn--big" id="ctaTextBottom" href="#">Text</a>
+            <a class="btn btn--ghost btn--big" id="ctaFbBottom" href="#" target="_blank" rel="noopener">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <div class="footer__brand">
+          <div class="footer__name">Clean Tek Pressure Washing</div>
+          <div class="footer__sub">Southeast Missouri</div>
+        </div>
+        <div class="footer__links">
+          <a id="ctaCallFooter" href="#">Call</a>
+          <a id="ctaTextFooter" href="#">Text</a>
+          <a id="ctaFbFooter" href="#" target="_blank" rel="noopener">Facebook</a>
+          <a id="ctaGoogleReviewFooter" href="#" target="_blank" rel="noopener">Google Review</a>
+          <a id="ctaFacebookReviewFooter" href="#" target="_blank" rel="noopener">Facebook Review</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Mobile bottom bar -->
+  <div class="mobileBar" aria-label="Mobile actions">
+    <a class="mobileBar__btn mobileBar__btn--solid" id="ctaCallMobile" href="#">Call</a>
+    <a class="mobileBar__btn" id="ctaTextMobile" href="#">Text</a>
+    <a class="mobileBar__btn" id="ctaFbMobile" href="#" target="_blank" rel="noopener">FB</a>
+  </div>
 
   <script src="assets/js/main.js"></script>
 </body>

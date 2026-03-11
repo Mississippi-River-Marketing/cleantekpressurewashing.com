@@ -13,26 +13,26 @@ margin:auto;
 .header{
 background:#fff;
 border-bottom:1px solid #eee;
-position:sticky;
-top:0;
-z-index:100;
+padding:14px 0;
 }
 
 .header-inner{
 display:flex;
+flex-direction:column;
 align-items:center;
-justify-content:space-between;
-padding:10px 0;
+gap:12px;
 }
 
 .logo{
-height:70px;
+height:90px;
 }
 
 .nav{
 display:flex;
-gap:25px;
+gap:22px;
 align-items:center;
+flex-wrap:wrap;
+justify-content:center;
 }
 
 .nav a{
@@ -70,7 +70,7 @@ max-width:650px;
 }
 
 .hero h1{
-font-size:48px;
+font-size:46px;
 }
 
 .hero-buttons{
@@ -181,12 +181,16 @@ color:#fff;
 
 @media(max-width:768px){
 
-.nav{
-display:none;
+.logo{
+height:70px;
 }
 
 .hero h1{
 font-size:34px;
+}
+
+.hero-buttons{
+flex-direction:column;
 }
 
 .gallery img{

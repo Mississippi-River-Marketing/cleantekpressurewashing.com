@@ -1,393 +1,949 @@
-<!doctype html>
+## `index.html`
+
+```html
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#060b14" />
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clean Tek Pressure Washing | Southeast Missouri</title>
-  <meta name="description" content="Clean Tek Pressure Washing serving Southeast Missouri. Driveways, concrete, brick, siding soft wash, decks and patios. Call now for a fast quote." />
-
-  <meta property="og:title" content="Clean Tek Pressure Washing | SEMO" />
-  <meta property="og:description" content="Real results. Surface-safe methods. Fast quotes by phone." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/img/crew-action.png" />
-
-  <link rel="icon" href="assets/favicon.png" onerror="this.href='assets/logo.png'">
-  <link rel="apple-touch-icon" href="assets/logo.png" />
-
-  <link rel="preload" as="image" href="assets/img/crew-action.png">
+  <meta name="description" content="Professional pressure washing in Cape Girardeau and Southeast Missouri. Residential and commercial exterior cleaning, house washing, driveway cleaning, window cleaning, and concrete patio cleaning." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-
 <body>
-  <!-- Top Nav -->
-  <header class="nav" role="banner">
-    <div class="wrap nav__inner">
-      <a class="nav__brand" href="#top" aria-label="Clean Tek home">
-        <img class="nav__logo" src="assets/logo.png" alt="Clean Tek logo" />
-        <div class="nav__brandText">
-          <div class="nav__name">Clean Tek</div>
-          <div class="nav__sub">Pressure Washing • SEMO</div>
-        </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Clean Tek Pressure Washing home">
+        <img src="assets/logo.png" alt="Clean Tek Pressure Washing logo" />
       </a>
 
-      <nav class="nav__links" aria-label="Site links">
-        <a href="#results">Results</a>
-        <a href="#process">Process</a>
-        <a href="#service-area">Service Area</a>
-      </nav>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-      <div class="nav__actions" aria-label="Primary actions">
-        <a class="btn btn--ghost" id="ctaTextTop" href="#">Text</a>
-        <a class="btn btn--solid" id="ctaCallTop" href="#">Call Now</a>
-      </div>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="service-area.html">Service Area</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn btn-nav" href="tel:15738378474">Call 573-837-8474</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Floating CTA (desktop) -->
-  <aside class="floatCta" aria-label="Quick actions">
-    <a class="floatCta__btn floatCta__btn--solid" id="ctaCallFloat" href="#">Call</a>
-    <a class="floatCta__btn" id="ctaTextFloat" href="#">Text</a>
-    <a class="floatCta__btn" id="ctaFbFloat" href="#" target="_blank" rel="noopener">Facebook</a>
-  </aside>
-
-  <main id="top">
-    <!-- HERO: original, brand-forward -->
-    <section class="hero" aria-label="Hero">
-      <div class="hero__bg" aria-hidden="true">
-        <div class="hero__bgImg" data-parallax="0.18" style="background-image:url('assets/img/crew-action.png')"></div>
-        <div class="hero__bgWash"></div>
-        <div class="hero__bgFlow"></div>
+  <main>
+    <section class="hero">
+      <div class="hero-bg">
+        <img src="assets/hero-main.jpg" alt="Clean Tek technician pressure washing a commercial building" />
       </div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <span class="eyebrow">Residential & Commercial Exterior Cleaning</span>
+        <h1>Professional Pressure Washing in Cape Girardeau & Southeast Missouri</h1>
+        <p>
+          Pressure washing, house washing, driveway cleaning, window cleaning, and concrete patio cleaning
+          done with professional equipment and attention to detail.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tel:15738378474">Call 573-837-8474</a>
+          <a class="btn btn-secondary" href="contact.html">Request a Free Estimate</a>
+        </div>
+        <ul class="hero-points">
+          <li>Fully insured</li>
+          <li>Free estimates</li>
+          <li>Locally owned</li>
+        </ul>
+      </div>
+    </section>
 
-      <div class="wrap hero__grid">
-        <div class="hero__copy">
-          <div class="chipRow reveal">
-            <span class="chip">Local • Southeast Missouri</span>
-            <span class="chip">Fast Quotes by Phone</span>
-            <span class="chip">Surface-safe methods</span>
-          </div>
+    <section class="section intro-strip">
+      <div class="container intro-grid">
+        <div>
+          <span class="section-kicker">Why Homeowners & Businesses Choose Clean Tek</span>
+          <h2>Simple service. Professional work. Real results.</h2>
+        </div>
+        <p>
+          We help residential and commercial properties look clean, sharp, and well-maintained with professional
+          exterior cleaning services throughout Southeast Missouri.
+        </p>
+      </div>
+    </section>
 
-          <h1 class="hero__h1 reveal">
-            Make concrete look new again.
-            <span class="hero__h1Accent">Clean. Even. Professional.</span>
-          </h1>
+    <section class="section services-preview">
+      <div class="container">
+        <div class="section-heading center">
+          <span class="section-kicker">Our Services</span>
+          <h2>Exterior cleaning services built around curb appeal and property care</h2>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <h3>Pressure Washing</h3>
+            <p>Professional pressure washing for residential and commercial exterior surfaces.</p>
+          </article>
+          <article class="service-card">
+            <h3>House Washing</h3>
+            <p>Safe exterior washing for siding, trim, and other home surfaces that need a fresh clean look.</p>
+          </article>
+          <article class="service-card">
+            <h3>Driveway Cleaning</h3>
+            <p>Lift years of buildup from concrete and improve the look of your property fast.</p>
+          </article>
+          <article class="service-card">
+            <h3>Window Cleaning</h3>
+            <p>Detailed window cleaning for clearer glass and a better finished appearance.</p>
+          </article>
+          <article class="service-card">
+            <h3>Concrete & Patio Cleaning</h3>
+            <p>Patios, walkways, steps, and concrete areas cleaned with commercial equipment.</p>
+          </article>
+          <article class="service-card">
+            <h3>Commercial Exterior Cleaning</h3>
+            <p>Exterior cleaning solutions for commercial buildings, storefronts, entryways, and concrete.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-          <p class="hero__p reveal">
-            Driveways, sidewalks, brick, siding soft wash, decks & patios — cleaned with the right method for the surface.
-            Serving the SEMO corridor: Jackson • Cape Girardeau • Sikeston • Dexter • Bloomfield • Perryville • Ste. Genevieve • New Madrid.
+    <section class="section split-section">
+      <div class="container split-grid">
+        <div class="split-copy">
+          <span class="section-kicker">Residential & Commercial</span>
+          <h2>Built for homes, storefronts, and commercial properties</h2>
+          <p>
+            Clean Tek handles everything from driveways, siding, patios, and windows to larger commercial exterior
+            cleaning projects. We show up with the right equipment, take care around your property, and focus on
+            results that actually improve appearance.
           </p>
-
-          <div class="hero__cta reveal">
-            <a class="btn btn--solid btn--big" id="ctaCallHero" href="#">📞 Call (Fastest)</a>
-            <a class="btn btn--ghost btn--big" id="ctaTextHero" href="#">Text Photos</a>
-            <a class="btn btn--ghost btn--big" id="ctaFbHero" href="#" target="_blank" rel="noopener">Facebook Message</a>
-          </div>
-
-          <div class="hero__meta reveal">
-            <div class="hero__metaItem">
-              <div class="hero__metaLabel">Phone</div>
-              <a class="hero__metaValue" id="phoneInline" href="#"></a>
-            </div>
-            <div class="hero__metaItem">
-              <div class="hero__metaLabel">Reviews</div>
-              <div class="hero__metaValue">
-                <a id="ctaGoogleReviewHero" href="#" target="_blank" rel="noopener">Google Review</a>
-                <span class="dot">•</span>
-                <a id="ctaFacebookReviewHero" href="#" target="_blank" rel="noopener">Facebook Review</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="scrollCue" aria-hidden="true">
-            <div class="scrollCue__line"></div>
-            <div class="scrollCue__text">Scroll</div>
+          <div class="trust-grid">
+            <div>Fully Insured</div>
+            <div>Free Estimates</div>
+            <div>Locally Owned</div>
+            <div>Commercial Equipment</div>
+            <div>Residential & Commercial</div>
+            <div>Satisfaction Guarantee</div>
           </div>
         </div>
-
-        <div class="hero__proof reveal">
-          <div class="proofCard">
-            <div class="proofCard__top">
-              <div class="proofCard__title">Proof, not promises</div>
-              <div class="proofCard__sub">Tap to zoom • real side-by-sides</div>
-            </div>
-
-            <button class="zoomTile" data-src="assets/img/driveway-garage-before-after.png" data-cap="Driveway + garage approach — heavy buildup removed">
-              <img src="assets/img/driveway-garage-before-after.png" alt="Before and after driveway cleaning" loading="eager">
-              <span class="zoomTile__hint">Tap</span>
-            </button>
-
-            <div class="proofCard__bottom">
-              <a class="btn btn--solid" href="#results">See More Results</a>
-              <a class="btn btn--ghost" href="#service-area">Check Service Area</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Diagonal separator -->
-      <div class="slash" aria-hidden="true"></div>
-    </section>
-
-    <!-- RESULTS: masonry + motion -->
-    <section id="results" class="section">
-      <div class="wrap">
-        <div class="section__head reveal">
-          <h2 class="h2">Before & After Results</h2>
-          <p class="sub">Tap any image to zoom. These are real Clean Tek transformations.</p>
-        </div>
-
-        <div class="masonry">
-          <!-- Use your assets (no repeats needed elsewhere) -->
-          <article class="tile reveal">
-            <div class="tile__head">
-              <div class="tile__title">Brick Steps</div>
-              <div class="tile__sub">Restored color & contrast</div>
-            </div>
-            <button class="zoomTile" data-src="assets/img/brick-steps-before-after.png" data-cap="Brick steps — restored color & contrast">
-              <img src="assets/img/brick-steps-before-after.png" alt="Brick steps before and after" loading="lazy">
-              <span class="zoomTile__hint">Tap</span>
-            </button>
-          </article>
-
-          <article class="tile reveal">
-            <div class="tile__head">
-              <div class="tile__title">Curved Driveway</div>
-              <div class="tile__sub">Full cleanup, crisp finish</div>
-            </div>
-            <button class="zoomTile" data-src="assets/img/curved-driveway-before-after.png" data-cap="Curved driveway — full cleanup, crisp finish">
-              <img src="assets/img/curved-driveway-before-after.png" alt="Curved driveway before and after" loading="lazy">
-              <span class="zoomTile__hint">Tap</span>
-            </button>
-          </article>
-
-          <article class="tile reveal">
-            <div class="tile__head">
-              <div class="tile__title">Siding Soft Wash</div>
-              <div class="tile__sub">Surface-safe method</div>
-            </div>
-            <button class="zoomTile" data-src="assets/img/vinyl-siding-softwash-before-after.png" data-cap="Siding soft wash — surface-safe method">
-              <img src="assets/img/vinyl-siding-softwash-before-after.png" alt="Siding soft wash before and after" loading="lazy">
-              <span class="zoomTile__hint">Tap</span>
-            </button>
-          </article>
-
-          <article class="tile reveal">
-            <div class="tile__head">
-              <div class="tile__title">Aggregate Concrete</div>
-              <div class="tile__sub">Texture restored</div>
-            </div>
-            <button class="zoomTile" data-src="assets/img/aggregate-concrete-before-after.png" data-cap="Aggregate concrete — texture restored">
-              <img src="assets/img/aggregate-concrete-before-after.png" alt="Aggregate concrete before and after" loading="lazy">
-              <span class="zoomTile__hint">Tap</span>
-            </button>
-          </article>
-
-          <article class="tile reveal">
-            <div class="tile__head">
-              <div class="tile__title">Walkway Cleanup</div>
-              <div class="tile__sub">Safer footing</div>
-            </div>
-            <button class="zoomTile" data-src="assets/img/walkway-before-after.png" data-cap="Walkway — safer footing and clean lines">
-              <img src="assets/img/walkway-before-after.png" alt="Walkway before and after" loading="lazy">
-              <span class="zoomTile__hint">Tap</span>
-            </button>
-          </article>
-
-          <article class="tile reveal">
-            <div class="tile__head">
-              <div class="tile__title">Deck Wash</div>
-              <div class="tile__sub">Organic buildup removed</div>
-            </div>
-            <button class="zoomTile" data-src="assets/img/deck-before-after.png" data-cap="Deck — organic buildup removed">
-              <img src="assets/img/deck-before-after.png" alt="Deck before and after" loading="lazy">
-              <span class="zoomTile__hint">Tap</span>
-            </button>
-          </article>
-
-          <article class="tile reveal">
-            <div class="tile__head">
-              <div class="tile__title">Sidewalk Results</div>
-              <div class="tile__sub">Clean lines</div>
-            </div>
-            <button class="zoomTile" data-src="assets/img/sidewalk-before-after.png" data-cap="Sidewalk — clean lines and big difference">
-              <img src="assets/img/sidewalk-before-after.png" alt="Sidewalk before and after" loading="lazy">
-              <span class="zoomTile__hint">Tap</span>
-            </button>
-          </article>
-        </div>
-
-        <div class="centerCta reveal">
-          <a class="btn btn--solid btn--big" id="ctaCallResults" href="#">Call for a Quote</a>
-          <a class="btn btn--ghost btn--big" id="ctaTextResults" href="#">Text Photos</a>
+        <div class="split-image-wrap">
+          <img src="assets/commercial-1.jpg" alt="Clean Tek commercial pressure washing work" />
         </div>
       </div>
     </section>
 
-    <!-- PROCESS: original “flow path” section -->
-    <section id="process" class="section section--dark">
-      <div class="wrap">
-        <div class="section__head reveal">
-          <h2 class="h2">The Clean Tek Method</h2>
-          <p class="sub">Simple. Clear. No guessing — and the surface determines the method.</p>
+    <section class="section process-section accent-bg">
+      <div class="container">
+        <div class="section-heading center narrow">
+          <span class="section-kicker">Our Process</span>
+          <h2>A straightforward process from estimate to finished result</h2>
         </div>
-
-        <div class="flow reveal">
-          <div class="flow__line" aria-hidden="true"></div>
-
-          <div class="step">
-            <div class="step__dot"></div>
-            <div class="step__card">
-              <div class="step__title">1) Call or Text Photos</div>
-              <div class="step__text">Fastest quote is by phone. Text is perfect if you want to send pictures.</div>
-            </div>
-          </div>
-
-          <div class="step">
-            <div class="step__dot"></div>
-            <div class="step__card">
-              <div class="step__title">2) Pick the Right Method</div>
-              <div class="step__text">Concrete can take pressure; siding often needs soft-wash. We match method to surface.</div>
-            </div>
-          </div>
-
-          <div class="step">
-            <div class="step__dot"></div>
-            <div class="step__card">
-              <div class="step__title">3) Clean Evenly (No Tiger Stripes)</div>
-              <div class="step__text">Even coverage, clean edges, and a consistent finish — the details matter.</div>
-            </div>
-          </div>
-
-          <div class="step">
-            <div class="step__dot"></div>
-            <div class="step__card">
-              <div class="step__title">4) Walkthrough + Results</div>
-              <div class="step__text">You see the difference immediately — and your curb appeal goes up the same day.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="split reveal">
-          <div class="split__left">
-            <h3 class="h3">Want the fastest quote?</h3>
-            <p class="sub">Call now. If you’re busy, text photos and your city — we’ll respond ASAP.</p>
-          </div>
-          <div class="split__right">
-            <a class="btn btn--solid btn--big" id="ctaCallProcess" href="#">Call Now</a>
-            <a class="btn btn--ghost btn--big" id="ctaTextProcess" href="#">Text Photos</a>
-            <a class="btn btn--ghost btn--big" id="ctaFbProcess" href="#" target="_blank" rel="noopener">Facebook</a>
-          </div>
+        <div class="process-grid">
+          <article>
+            <span>01</span>
+            <h3>On-Site Estimate</h3>
+            <p>Most quotes are done in person so we can properly judge the scope and price the work accurately.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Prep & Protection</h3>
+            <p>We prepare the area, work carefully around the property, and clean with attention to detail.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Professional Cleaning</h3>
+            <p>Using commercial equipment, we clean the target surfaces thoroughly and efficiently.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Final Walkthrough</h3>
+            <p>We make sure the result looks right and leaves the property cleaner, brighter, and more presentable.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- SERVICE AREA: local-first, “route” visual + real map -->
-    <section id="service-area" class="section">
-      <div class="wrap">
-        <div class="section__head reveal">
-          <h2 class="h2">Service Area (SEMO Corridor)</h2>
-          <p class="sub">
-            Jackson • Cape Girardeau • Sikeston • Dexter • Bloomfield • Perryville • Ste. Genevieve • New Madrid —
-            and everywhere between.
+    <section class="section results-section">
+      <div class="container">
+        <div class="section-heading center">
+          <span class="section-kicker">Results</span>
+          <h2>Real before and after work from Clean Tek jobs</h2>
+        </div>
+        <div class="results-grid">
+          <figure class="result-card large">
+            <img src="assets/result-driveway-curved.jpg" alt="Before and after curved driveway cleaning" />
+          </figure>
+          <figure class="result-card">
+            <img src="assets/result-driveway-garage.jpg" alt="Before and after garage driveway cleaning" />
+          </figure>
+          <figure class="result-card">
+            <img src="assets/result-brick-steps.jpg" alt="Before and after brick steps cleaning" />
+          </figure>
+          <figure class="result-card">
+            <img src="assets/result-concrete-pad.jpg" alt="Before and after concrete cleaning" />
+          </figure>
+          <figure class="result-card">
+            <img src="assets/result-siding.jpg" alt="Before and after siding cleaning" />
+          </figure>
+          <figure class="result-card">
+            <img src="assets/result-walkway.jpg" alt="Before and after walkway cleaning" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section windows-section accent-bg-light">
+      <div class="container windows-grid">
+        <div class="windows-copy">
+          <span class="section-kicker">Window Cleaning</span>
+          <h2>Window cleaning that finishes the job the right way</h2>
+          <p>
+            Window cleaning is one of the fastest ways to improve the look of a home or commercial property.
+            Clean glass makes the whole exterior feel sharper, brighter, and better maintained.
+          </p>
+          <a class="btn btn-primary" href="tel:15738378474">Call for Window Cleaning</a>
+        </div>
+        <div class="window-before-after">
+          <figure>
+            <img src="assets/window-before.jpg" alt="Dirty window before cleaning" />
+            <figcaption>Before</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/window-after.jpg" alt="Window after cleaning" />
+            <figcaption>After</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reviews-section">
+      <div class="container">
+        <div class="section-heading center narrow">
+          <span class="section-kicker">Reviews</span>
+          <h2>What customers are saying about Clean Tek</h2>
+        </div>
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>Clean Tek did a great job on our windows! They were professional and detail oriented. We would use again.</p>
+            <strong>Westendorf Properties</strong>
+          </article>
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>Owen is very reliable and thorough. I could not be more satisfied with the work he did to pressure wash my house and clean out my gutters. Highly recommend!</p>
+            <strong>Sarah Strohmeyer</strong>
+          </article>
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>Owen, the owner, was very professional and timely. He did an excellent job cleaning all of our concrete. I would recommend him and his work without reservation.</p>
+            <strong>Roger Tolliver</strong>
+          </article>
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>Owen was extremely professional and I couldn't be happier with the results. Thank you for bringing back the looks of my house.</p>
+            <strong>Bob Bogacki</strong>
+          </article>
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>Owen did a fantastic job pressure washing my entire house. He took extra care around my landscaping and flower beds. My siding and patio look brand new.</p>
+            <strong>Brandi Ritter</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section service-area-section accent-bg">
+      <div class="container service-area-grid">
+        <div>
+          <span class="section-kicker">Service Area</span>
+          <h2>Serving Southeast Missouri</h2>
+          <p>
+            Clean Tek provides pressure washing and exterior cleaning services across Southeast Missouri for both
+            residential and commercial customers.
           </p>
         </div>
-
-        <div class="area reveal">
-          <div class="area__left">
-            <div class="area__route" aria-hidden="true">
-              <div class="route">
-                <div class="route__dot"></div><div class="route__name">Ste. Genevieve</div>
-                <div class="route__line"></div>
-                <div class="route__dot"></div><div class="route__name">Perryville</div>
-                <div class="route__line"></div>
-                <div class="route__dot"></div><div class="route__name">Jackson</div>
-                <div class="route__line"></div>
-                <div class="route__dot"></div><div class="route__name">Cape Girardeau</div>
-                <div class="route__line"></div>
-                <div class="route__dot"></div><div class="route__name">Sikeston</div>
-                <div class="route__line"></div>
-                <div class="route__dot"></div><div class="route__name">Dexter</div>
-                <div class="route__line"></div>
-                <div class="route__dot"></div><div class="route__name">Bloomfield</div>
-                <div class="route__line"></div>
-                <div class="route__dot"></div><div class="route__name">New Madrid</div>
-              </div>
-            </div>
-
-            <div class="area__cta">
-              <a class="btn btn--solid btn--big" id="ctaCallArea" href="#">Call Now</a>
-              <a class="btn btn--ghost btn--big" id="ctaTextArea" href="#">Text Photos</a>
-            </div>
-          </div>
-
-          <div class="area__map">
-            <div class="mapFrame">
-              <iframe
-                title="Clean Tek service area map"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps?hl=en&q=Cape%20Girardeau%20MO&z=9&output=embed">
-              </iframe>
-              <div class="mapFrame__overlay" aria-hidden="true">
-                <!-- stable polygon only -->
-                <svg viewBox="0 0 1000 600" preserveAspectRatio="none">
-                  <path
-                    d="M265,120
-                       C360,70 470,62 580,98
-                       C675,130 740,200 770,280
-                       C795,350 780,430 725,495
-                       C665,565 555,585 460,555
-                       C370,525 305,455 280,375
-                       C252,290 238,200 265,120 Z"
-                    fill="rgba(27,141,255,0.14)"
-                    stroke="rgba(27,141,255,0.95)"
-                    stroke-width="4" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="footCta reveal">
-          <div class="footCta__left">
-            <div class="footCta__title">Call is fastest.</div>
-            <div class="footCta__sub">Text is perfect if you want to send photos.</div>
-          </div>
-          <div class="footCta__right">
-            <a class="btn btn--solid btn--big" id="ctaCallBottom" href="#">Call Now</a>
-            <a class="btn btn--ghost btn--big" id="ctaTextBottom" href="#">Text</a>
-            <a class="btn btn--ghost btn--big" id="ctaFbBottom" href="#" target="_blank" rel="noopener">Facebook</a>
-          </div>
+        <div class="service-area-list">
+          <span>Cape Girardeau</span>
+          <span>Jackson</span>
+          <span>Perryville</span>
+          <span>Sikeston</span>
+          <span>Dexter</span>
+          <span>Ste. Genevieve</span>
+          <span>Bloomfield</span>
+          <span>New Madrid</span>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="wrap footer__inner">
-        <div class="footer__brand">
-          <div class="footer__name">Clean Tek Pressure Washing</div>
-          <div class="footer__sub">Southeast Missouri</div>
+    <section class="section cta-section">
+      <div class="container cta-box">
+        <div>
+          <span class="section-kicker">Ready to Get Started?</span>
+          <h2>Call Clean Tek today for a free estimate</h2>
+          <p>Most quotes are done in person so we can accurately price the work and recommend the right service.</p>
         </div>
-        <div class="footer__links">
-          <a id="ctaCallFooter" href="#">Call</a>
-          <a id="ctaTextFooter" href="#">Text</a>
-          <a id="ctaFbFooter" href="#" target="_blank" rel="noopener">Facebook</a>
-          <a id="ctaGoogleReviewFooter" href="#" target="_blank" rel="noopener">Google Review</a>
-          <a id="ctaFacebookReviewFooter" href="#" target="_blank" rel="noopener">Facebook Review</a>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="tel:15738378474">Call 573-837-8474</a>
+          <a class="btn btn-secondary" href="contact.html">Contact Clean Tek</a>
         </div>
       </div>
-    </footer>
+    </section>
   </main>
 
-  <!-- Mobile bottom bar -->
-  <div class="mobileBar" aria-label="Mobile actions">
-    <a class="mobileBar__btn mobileBar__btn--solid" id="ctaCallMobile" href="#">Call</a>
-    <a class="mobileBar__btn" id="ctaTextMobile" href="#">Text</a>
-    <a class="mobileBar__btn" id="ctaFbMobile" href="#" target="_blank" rel="noopener">FB</a>
-  </div>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="assets/logo.png" alt="Clean Tek Pressure Washing logo" />
+        <p>Professional pressure washing and exterior cleaning in Cape Girardeau and Southeast Missouri.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="service-area.html">Service Area</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:15738378474">573-837-8474</a></li>
+          <li><a href="https://www.facebook.com/CleanTekPressureWashing/" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+```
+
+---
+
+## `assets/css/styles.css`
+
+```css
+:root {
+  --blue: #1658c9;
+  --blue-dark: #103f91;
+  --text: #111827;
+  --muted: #5b6472;
+  --line: #e5e7eb;
+  --surface: #ffffff;
+  --surface-alt: #f6f8fb;
+  --surface-accent: #edf4ff;
+  --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  --radius: 18px;
+  --container: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background: #fff;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(100% - 2rem, var(--container));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 5.5rem 0;
+}
+
+.section-heading {
+  margin-bottom: 2rem;
+}
+
+.section-heading.center,
+.center {
+  text-align: center;
+}
+
+.section-heading.narrow {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-kicker,
+.eyebrow {
+  display: inline-block;
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 0.84rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 0.8rem;
+  line-height: 1.12;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  max-width: 880px;
+}
+
+h2 {
+  font-size: clamp(1.9rem, 3vw, 3rem);
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--blue-dark);
+}
+
+.btn-secondary {
+  background: #fff;
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.45);
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.92);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(229,231,235,0.8);
+}
+
+.header-inner {
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand img {
+  width: 170px;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-weight: 600;
+}
+
+.site-nav a:not(.btn-nav) {
+  color: #1f2937;
+}
+
+.btn-nav {
+  background: var(--blue);
+  color: #fff;
+  padding: 0.82rem 1.2rem;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: var(--text);
+  margin: 5px 0;
+  border-radius: 999px;
+}
+
+.hero {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg,
+.hero-bg img,
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  background:
+    linear-gradient(90deg, rgba(5,10,24,0.78) 0%, rgba(5,10,24,0.58) 38%, rgba(5,10,24,0.28) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.45) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 4rem 0;
+}
+
+.hero-content p {
+  color: rgba(255,255,255,0.85);
+  max-width: 720px;
+  font-size: 1.06rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.8rem 0 1.2rem;
+}
+
+.hero-points {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  padding: 0;
+  margin: 1.2rem 0 0;
+  color: rgba(255,255,255,0.88);
+  font-weight: 600;
+}
+
+.intro-strip {
+  padding: 2.4rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2rem;
+  align-items: end;
+}
+
+.services-grid,
+.reviews-grid,
+.process-grid {
+  display: grid;
+  gap: 1.3rem;
+}
+
+.services-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.service-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.split-grid,
+.windows-grid,
+.service-area-grid,
+.footer-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.split-grid {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.split-image-wrap img {
+  width: 100%;
+  border-radius: 22px;
+  min-height: 520px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+}
+
+.trust-grid div {
+  background: var(--surface-alt);
+  border: 1px solid var(--line);
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+  font-weight: 600;
+}
+
+.accent-bg {
+  background: var(--surface-alt);
+}
+
+.accent-bg-light {
+  background: var(--surface-accent);
+}
+
+.process-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+
+.process-grid article {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.process-grid span {
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.result-card {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.result-card.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.result-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.windows-grid {
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+}
+
+.window-before-after {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.window-before-after figure {
+  margin: 0;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.window-before-after img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+.window-before-after figcaption {
+  padding: 0.85rem 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.reviews-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.review-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.stars {
+  color: var(--blue);
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+
+.review-card strong {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.service-area-grid {
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+}
+
+.service-area-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.service-area-list span {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+}
+
+.cta-section {
+  padding-top: 0;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, #0f3f93 0%, #1658c9 60%, #2f76f2 100%);
+  color: #fff;
+  border-radius: 28px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.cta-box p,
+.cta-box .section-kicker {
+  color: rgba(255,255,255,0.9);
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-footer {
+  background: #0c1322;
+  color: rgba(255,255,255,0.82);
+  padding: 4rem 0 2rem;
+}
+
+.footer-grid {
+  grid-template-columns: 1.3fr 0.8fr 0.8fr;
+}
+
+.footer-logo {
+  width: 170px;
+  background: #fff;
+  padding: 0.55rem 0.85rem;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+}
+
+.site-footer h3 {
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer li + li {
+  margin-top: 0.6rem;
+}
+
+@media (max-width: 1100px) {
+  .services-grid,
+  .reviews-grid,
+  .process-grid,
+  .results-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .result-card.large {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 84px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .intro-grid,
+  .split-grid,
+  .windows-grid,
+  .service-area-grid,
+  .footer-grid,
+  .cta-box {
+    grid-template-columns: 1fr;
+  }
+
+  .split-image-wrap {
+    order: -1;
+  }
+
+  .hero {
+    min-height: 78vh;
+  }
+}
+
+@media (max-width: 680px) {
+  .section {
+    padding: 4rem 0;
+  }
+
+  .services-grid,
+  .reviews-grid,
+  .process-grid,
+  .results-grid,
+  .window-before-after,
+  .service-area-list,
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-card.large {
+    grid-column: span 1;
+  }
+
+  .brand img,
+  .footer-logo {
+    width: 150px;
+  }
+
+  .hero-actions,
+  .cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+```
+
+---
+
+## `assets/js/main.js`
+
+```javascript
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.site-nav');
+
+if (toggle && nav) {
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+}
+```
+
+---
+
+## Final image filenames to use in your project
+
+```text
+assets/logo.png
+assets/hero-main.jpg
+assets/commercial-1.jpg
+assets/result-brick-steps.jpg
+assets/result-concrete-pad.jpg
+assets/result-driveway-curved.jpg
+assets/result-driveway-garage.jpg
+assets/result-siding.jpg
+assets/result-walkway.jpg
+assets/window-after.jpg
+assets/window-before.jpg
+```
+
+If you want, next I can turn this into matching `services.html`, `service-area.html`, and `contact.html` files in the same style.
